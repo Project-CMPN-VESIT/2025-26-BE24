@@ -196,7 +196,7 @@ export function InterviewSetup() {
   // Start interview
 
   const canStart =
-    isFullscreen &&
+     !!document.fullscreenElement  &&
     micPermission &&
     (interviewConfig.interviewType === "audio" || cameraPermission);
 
